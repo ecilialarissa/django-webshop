@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title%}Página Home{% endblock %}
+
+{% block content %} 
+
+<div class="container">
+    <h1 class="text-center">Bem-vindo</h1>
+        <div class="row">
+        {% for p in produto_list %}
+            <div class="col-md-4">
+
+                <h4>{{p.titulo}}</h4>
+                <img src="{{p.image.url}}" alt="" width="150">
+            </div>
+        {%endfor%}
+    </div>
+</div>
+{% endblock %}
