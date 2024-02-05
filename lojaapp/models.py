@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from auditlog.registry import auditlog
 
+
 class MyAuditlog(models.Model): 
     pass
 auditlog.register(MyAuditlog)

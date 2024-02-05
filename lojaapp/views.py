@@ -1,6 +1,11 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+
 from.models import *
+
+class MyListView(ListView):
+    template_name = 'produtolista.html'
+    queryset = Produto.objects.all() 
 
 class HomeView(TemplateView): 
     template_name = "home.html"

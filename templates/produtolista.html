@@ -1,0 +1,11 @@
+{% block content %} 
+
+{% for p in produto_list %}
+<div class="col-md-4">
+
+    <h4>{{p.titulo}}</h4>
+    <img src="{{p.image.url}}" alt="" width="150">
+</div>
+{%endfor%}
+
+{% endblock %}
